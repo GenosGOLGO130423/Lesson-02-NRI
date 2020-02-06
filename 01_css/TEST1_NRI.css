@@ -11,15 +11,24 @@ body {
 }
 
 /* ページヘッダー */
- #pageHead h1 {
- 	font-size: 20px;
-	color: #0d43d6;
-	line-height: 1.2;
-	text-align:left;
-	padding: 0 0 40px 0;
-	margin: 0 0 20px 0;
-	box-sizing:border-box;
+ #pageHead img {
+ 	display: inline-block;
+ 	background-size: cover;
+ 	height: auto;
+	padding: 0 -10px 50px 0;
+	margin: 0 0 50px 0;
  }
+ 
+#pageHead p {
+	color: #999999;
+	font-size: 12px;
+	margin: 0 0 30px 0;
+}
+
+#pageHead p a {
+	color: #999999;
+	text-decoration: none;
+}
  
 /* タイトル 親要素を相対配置にする */
 .mainTitle {
@@ -56,39 +65,67 @@ body {
 /* タイトルの画像 */
 .h1whats2 img {
 	width: 100%;
-	height: 200px;
+	height:auto;
 	background-size: cover;
 	color: #FFFFFF;
 }
 
+/* ソーシャルボタン -A*/
+/* 親要素を相対配置に設定 */
+.mainTitleBlock {
+	position: relative;
+}
+
+.socialButton-A {
+	font-size: 12px;
+	color: #666666;
+	display: flex;
+	width: calc(20%);
+	position: absolute;
+	bottom: -50px;
+	right: 60px;
+}
+
+.socialButton-A .icon-facebook,
+.socialButton-A .icon-twitter,
+.socialButton-A .icon-linkedin {
+	padding:3px 3px 3px 15px;
+	margin: 5px;
+}
+
+
 /* 本文のタイトル */
 .heading-typeA {
 	margin: 30px 150px;
-/* 	border:solid #FF00FF */
+}
+.heading-typeA h2 {
+	position:relative;
 }
 
 /* 青ボックスの位置調整 */
-.images_bg {
-/* 	border: solid #FF0000; */
-	width: 100%;
-	margin: 0;
+.images_bg img{
+	max-width: 100%;
+/* 	padding: 5px 20px 3px 20px; */
 	position: absolute;
-	top: 334px;
-	left: 265px;
+	bottom: 8px;
+	left: -35px;
 }
 
 /* 本文のタイトルを相対配置に（親要素） */
-.heading-typeA h2{
+.heading-typeA {
+/* 	border: 1px solid red; */
 	position: relative;
 	font-size: 18px;
-	font-weight: bold;
+	line-height: 1.5;
 	color: #333333;
 	margin-bottom: 20px;
+	padding: 0;
+	margin:0 0 30px 100px ;
 }
 
 /* .heading-typeBの共通 */
 .heading-typeB {
-	border:solid #FF00FF;
+/* 	border:solid #FF00FF; */
 	line-height: 1.88;
 	text-align: center;
 	width: 100%;
@@ -113,61 +150,131 @@ body {
 }
 /* ↑↑↑↑↑なぜか反映されない↑↑↑↑↑ */
 
+/* スクショ_デジタルが拓く近未来(画像) */
+.story06_img_02 {
+	text-align: center;
+	padding: 15px 30px;
+	margin: 20px 0px 60px 0;
+}
+
+/* ビジネスモデルの特徴、人材が支えるNRI
+Previous Page、Next Page */
+
+.Previous-Next-Page ul li a:hover{
+	text-decoration: underline;
+}
+.Previous-Next-Page .text-align-left ul li {
+	list-style: none;
+	list-style-image: url("../02_images/icon-chevronLeft.svg");
+	list-style-position: inside;
+	text-align: left;
+}
+
+.Previous-Next-Page .text-align-right ul li {
+	list-style: none;
+	list-style-position: inside;
+/* 	list-style-image: url("../02_images/icon-chevronRight.svg"); */
+	text-align: right;
+}
+.Previous-Next-Page ul li a {
+	text-decoration: none;
+	color: #0C419A;
+	font-size: 16px;
+}
+
 /* 表 */
-caption {
-	position: absolute;
-	top: 40px;
-	left: 40px;
+.TextTable {
+	border: 1px solid #DEECF8;
+	background-color: #DEECF8;
+	padding: 20px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+/* 要素を横並びに、リストスタイルを画像（>）に変更 */
+.TextTable p {
 	font-weight: bold;
 }
 
-table {
-	position: relative;
-	font-size: 16px;
-	border: 1px solid #DEECF8;
-	border-collapse: separate;
-	border-spacing: 20px;
-	width: 100%;
-	text-align: center;
-	padding: 40px 5px 5px 35px;
-	margin:30px;
-	background-color: #DEECF8;
-}
-
-table th,
-table td {
+.TextTable .TextTable-A ul li {
 	border: 1px solid #CCCCCC;
-	font-size: 16px;
-	background-color:#FFFFFF;
-	padding: 15px 24px;
-	margin: 10px 20px;	
+	background-color: #FFFFFF;
+	padding:15px  20px;
+	margin-bottom: 40px;
+	list-style: none;
+	list-style-image: url("../02_images/icon-chevronRight.svg");
+	list-style-position: inside;
 }
 
-table th a,
-table td a {
-
-	color: #0C419A;
+/* マウスオーバーした時に下線を表示 */
+.TextTable ul li a {
 	text-decoration: none;
-	display: block;
-	padding: 10px 0;
-	margin: 0;
+	color: #0C419A;
+	font-size: 16px;
 }
 
-table th a:hover,
-table td a:hover {
-	background-color: rgba(204,204,204,0.2);
+/* マウスオーバーした時に背景色を変える */
+.TextTable .TextTable-A  ul li:hover{
+	background-color: rgba(192,192,192,0.1);
 	background-size:cover;	
 }
+
+.TextTable-1,
+.TextTable-2,
+.TextTable-3,
+.TextTable-4,
+.TextTable-5,
+.TextTable-6 {
+	float: left;
+	padding: 10px;
+	width: calc(25.5%);
+	height: 55px;
+}
+
+.TextTable-A:after{
+	content: "";
+	clear: both;
+	display: block;	
+}
+
+/* ソーシャルボタン-B */
+/* 親要素を相対配置に設定 */
+.TextTableBlock {
+	position: relative;
+	background-color: #33FFCC;
+}
+
+.socialButton-B {
+/* 	background-color: skyblue; */
+	font-size: 12px;
+	color: #666666;
+	display: flex;
+	width: calc(20%);
+	position: absolute;
+	bottom: -90px;
+	right: 60px;
+}
+
+.socialButton-B .icon-facebook,
+.socialButton-B .icon-twitter,
+.socialButton-B .icon-linkedin {
+	padding:3px 3px 3px 15px;
+	margin: 5px;
+}
+
+
 
 /* 企業情報リスト */
 .heading-typeC {
 	text-align: left;
+	clear:both;
 }
 
 .heading-typeC h4 {
 	border-top: 2px solid #333333;
 	border-bottom: 1px dotted #999999;
 	padding: 18px 0 30px 0;
+	margin-top: 180px;
 }
 
 .heading-typeC ul {
@@ -184,8 +291,6 @@ table td a:hover {
 .heading-typeC ul li {
 	width: 220px;
 	float: left;
-/* 	display: inline-block; */
-/* 	text-align: left; */
 	color: #0C419A;
 	font-size: 14px;
 	list-style: none;
@@ -200,62 +305,150 @@ table td a:hover {
 	padding: 0;
 	line-height: 1.429;
 }
-
-/* ナレッジ・インサイト〜サイトマップ */
-
-
-/* floatして親要素の高さがなくなったので、clearfixで、高さを確保 */
-.heading-typeD ul:after,
-.heading-typeE ul:after,
-.heading-typeF ul:after,
-.heading-typeG ul:after,
-.heading-typeH ul:after,
-.heading-typeI ul:after,
-.heading-typeJ ul:after{
-	content: "";
-	clear: both;
-	display: block;
+/* リンクバック */
+/* マウスオーバーした時に下線を表示 */
+.link-back ul li a {
+	text-decoration: none;
+	font-size: 16px;
+	color: #0C419A;
+	padding-left: 10px;
+}
+.link-back ul li a:hover{
+	text-decoration: underline;
+}
+.link-back ul li {
+	list-style: none;
+	list-style-image: url("../02_images/icon-chevronLeft.svg");
 }
 
+/* ソーシャルボタン-C (Follow Us)*/
+.socialButton-C_linkback {
+/* 	background-color: #33FFCC; */
+	margin: 80px 0 30px 0;
+}
+
+.socialButton-C {
+/* 	background-color: skyblue; */
+	border-top: 2px solid #999999;
+	border-bottom: 2px solid #999999;
+	padding: 10px 0;
+	margin: 80px 0 50px 0;
+	text-align:center;
+	max-width:100%;
+	background-size: cover;
+}
+
+.socialButton-C p {
+	color: #005BAC;
+	font-size: 20px;
+	font-weight: bold;
+/* 	border: 1px solid red; */
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.socialButton-C .icon-facebook, 
+.socialButton-C .icon-twitter,
+.socialButton-C .icon-linkedin {
+		display: inline-block;
+/* 		border: 1px solid red; */
+		padding: 7px;
+		margin: 10px;
+/* 		vertical-align: center; */
+}
+
+/* ナレッジ・インサイト〜サイトマップ全体 */
 .heading-typeD,
 .heading-typeE,
 .heading-typeF,
 .heading-typeG,
 .heading-typeH,
 .heading-typeI,
-.heading-typeJ {
-	color: #999999;
-	border-top:1px dotted #999999;
-	width: 230px;
-	float: left;
-	
+.heading-typeJ,
+.heading-typeK,
+.heading-typeL,
+.heading-typeM,
+.heading-typeN,
+.heading-typeO {
+	width: calc(25%);
+	height: auto;
+	padding: 0px 10px;
+	box-sizing: border-box;
 }
 
-.heading-typeD ul li,
-.heading-typeE ul li,
-.heading-typeF ul li,
-.heading-typeG ul li,
-.heading-typeH ul li,
-.heading-typeI ul li,
-.heading-typeJ ul li {
+/* line-heightの調整 */
+.heading-typeD-2 ul li a,
+.heading-typeE-2 ul li a,
+.heading-typeF-2 ul li a,
+.heading-typeG-2 ul li a,
+.heading-typeH-2 ul li a,
+.heading-typeI-2 ul li a {
+ 	line-height: 2.5
+}
+
+
+/* Flexboxを使い、レイアウトを横並びにする */
+.heading-typeD-O {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* マウスオーバーした時に下線を表示 */
+.heading-typeD-O ul li:hover{
+	text-decoration: underline;
+}
+
+/* 罫線を上下に設定 */
+.heading-typeD-1,
+.heading-typeE-1,
+.heading-typeF-1,
+.heading-typeG-1,
+.heading-typeH-1,
+.heading-typeI-1,
+.heading-typeJ-1,
+.heading-typeK-1,
+.heading-typeL-1,
+.heading-typeM-1,
+.heading-typeN-1,
+.heading-typeO-1 {
+	color: #666666;
+	font-weight: bold;
+	font-size: 16px;
+	border-top:1px solid #CCCCCC;
+	border-bottom:1px solid #CCCCCC;
+}
+
+.heading-typeD-1 ul li a,
+.heading-typeE-1 ul li a,
+.heading-typeF-1 ul li a,
+.heading-typeG-1 ul li a,
+.heading-typeH-1 ul li a,
+.heading-typeI-1 ul li a,
+.heading-typeJ-1 ul li a,
+.heading-typeK-1 ul li a,
+.heading-typeL-1 ul li a,
+.heading-typeM-1 ul li a,
+.heading-typeN-1 ul li a,
+.heading-typeO-1 ul li a {
+	padding: 12px 0;
+	vertical-align: bottom;
+}
+
+/* リストスタイルを画像表示（>） */
+.heading-typeD-O ul li {
 	list-style: none;
 	list-style-image: url("../02_images/icon-chevronRight.svg");
 }
 
-.heading-typeD ul li a,
-.heading-typeE ul li a,
-.heading-typeF ul li a,
-.heading-typeG ul li a,
-.heading-typeH ul li a,
-.heading-typeI ul li a,
-.heading-typeJ ul li a{
+.heading-typeD-O ul li a{
 	color: #999999;
+	font-size: 14px;
 	text-decoration: none;
 }
 
 /* ページフッター */
 .pageFooter-typeA {
-	padding: 0 0 66px 0;
+	padding: 60px 0 66px 0;
 }
 
 /* フッターのリスト */
@@ -263,7 +456,7 @@ table td a:hover {
 	font-size: 12px;
 	color: #999999;
 	list-style: none;
-	width:120px;
+	width: calc(14.2%);
 	float: left;
 	border-right: 1px solid #999999;
 	box-sizing: border-box;
@@ -293,7 +486,7 @@ table td a:hover {
 }
 
 .pageFooter-typeB ul li:first-child {
-	padding: 0 0 0 5px;
+	padding: 0 5px;
 }
 
 /* コピーライト */
