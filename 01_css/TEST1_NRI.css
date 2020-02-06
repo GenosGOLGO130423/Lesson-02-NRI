@@ -82,8 +82,9 @@ body {
 	display: flex;
 	width: calc(20%);
 	position: absolute;
-	bottom: -50px;
+	bottom: 110px;
 	right: 60px;
+	margin-top: 60px;
 }
 
 .socialButton-A .icon-facebook,
@@ -100,6 +101,8 @@ body {
 }
 .heading-typeA h2 {
 	position:relative;
+	padding-top: 60px;
+	font-size: 22px;
 }
 
 /* 青ボックスの位置調整 */
@@ -107,13 +110,12 @@ body {
 	max-width: 100%;
 /* 	padding: 5px 20px 3px 20px; */
 	position: absolute;
-	bottom: 8px;
+	bottom: 5px;
 	left: -35px;
 }
 
 /* 本文のタイトルを相対配置に（親要素） */
 .heading-typeA {
-/* 	border: 1px solid red; */
 	position: relative;
 	font-size: 18px;
 	line-height: 1.5;
@@ -125,11 +127,11 @@ body {
 
 /* .heading-typeBの共通 */
 .heading-typeB {
-/* 	border:solid #FF00FF; */
 	line-height: 1.88;
-	text-align: center;
-	width: 100%;
+	text-align: left;
+	max-width: 100%;
 	height: auto;
+	margin-left: 67px;
 }
 
 /* .heading-typeB p 共通 */
