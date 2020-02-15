@@ -2,120 +2,126 @@
 
 body {
 	font-family: 'Noto Sans JP', sans-serif;
-	}
+}
 
 /* ページ全体 */
-#pageAll {
-	width: 980px;
-	margin: 0 auto;
+.page-all {
+	margin: 0;
 }
 
 /* ページヘッダー */
- #pageHead img {
+#page-head img {
  	display: inline-block;
  	background-size: cover;
- 	height: auto;
+ 	width: 100%;
+ 	height: 60px;
 	padding: 0 -10px 50px 0;
-	margin: 0 0 50px 0;
+	margin: 0 0 50px 14px;
  }
  
-#pageHead p {
+#page-head .page-head__breadcrumb {
 	color: #999999;
 	font-size: 12px;
-	margin: 0 0 30px 0;
+	margin: 0 0 30px 100px;
 }
 
-#pageHead p a {
+#page-head .page-head__breadcrumb a {
 	color: #999999;
 	text-decoration: none;
 }
  
 /* タイトル 親要素を相対配置にする */
-.mainTitle {
+#main-title .main-title__heading {
 	position: relative;
-	margin : 0 0 50px 0;
+	margin : 0 0 0 0;
 }
 
-.mainTitle img {
+#main-title .main-title__heading img {
 	vertical-align: top;
 }
 
-/* mainTitleTextを絶対配置に指定 */
-.mainTitle .mainTitleText{
+/* main-title__heading--textを絶対配置に指定 */
+#main-title .main-title__heading .main-title__heading--text{
 	position: absolute;
 	top: 20px;
 	left: 50px; 
 	color: #FFFFFF;
 	padding: 0px 20px;
-
 }
 
-.mainTitle .mainTitleText p {
-	font-size:14px;
+#main-title .main-title__heading .main-title__heading--text p {
+	font-size:20px;
 	line-height: 1.4;
+	margin: 0 0 0 33px;
+}
+
+#main-title .main-title__heading .main-title__heading--text  h1 {
+	font-size:28px;	
+	line-height: 1.3;
+	margin-bottom: 0;
+	margin-left: 30px;
+}
+
+/* トップイメージ（ビルの画像） */
+.top-image img{
+	display: block;
+	width: 100%;
+	height: 250px;
+}
+
+/* figureクラスのmargin 「user agent stylesheet」のリセット */
+figure {
 	margin: 0;
 }
 
-.mainTitle .mainTitleText  h1 {
-	font-size:18px;	
-	line-height: 1.3;
-	margin-bottom: 0;
-}
-
-/* タイトルの画像 */
-.h1whats2 img {
-	width: 100%;
-	height:auto;
-	background-size: cover;
-	color: #FFFFFF;
-}
-
-/* ソーシャルボタン -A*/
+/* ソーシャルボタン上部*/
 /* 親要素を相対配置に設定 */
-.mainTitleBlock {
+#main-title .main-title__heading {
 	position: relative;
 }
 
-.socialButton-A {
+.social-button-top {
 	font-size: 12px;
 	color: #666666;
 	display: flex;
 	width: calc(20%);
 	position: absolute;
-	bottom: 110px;
-	right: 60px;
-	margin-top: 60px;
+	bottom: 220px;
+	right: 150px;
 }
 
-.socialButton-A .icon-facebook,
-.socialButton-A .icon-twitter,
-.socialButton-A .icon-linkedin {
+.social-button-top .icon-facebook,
+.social-button-top .icon-twitter,
+.social-button-top .icon-linkedin {
 	padding:3px 3px 3px 15px;
 	margin: 5px;
 }
 
+/* メインページの余白設定 */
+#page-body-main {
+	margin: 0 140px 60px 140px;
+}
 
 /* 本文のタイトル */
-.heading-typeA {
+#page-body-main .page-body-main__heading {
 	margin: 30px 150px;
 }
-.heading-typeA h2 {
+#page-body-main .page-body-main__heading h2 {
 	position:relative;
 	padding-top: 60px;
 	font-size: 22px;
 }
 
 /* 青ボックスの位置調整 */
-.images_bg img{
+.heading-blue-box img{
 	max-width: 100%;
-/* 	padding: 5px 20px 3px 20px; */
 	position: absolute;
 	bottom: 5px;
 	left: -35px;
 }
 
 /* 本文のタイトルを相対配置に（親要素） */
-.heading-typeA {
+#page-body-main .page-body-main__heading {
 	position: relative;
 	font-size: 18px;
 	line-height: 1.5;
@@ -125,8 +131,7 @@ body {
 	margin:0 0 30px 100px ;
 }
 
-/* .heading-typeBの共通 */
-.heading-typeB {
+#page-body-main .page-body-main__heading--text {
 	line-height: 1.88;
 	text-align: left;
 	max-width: 100%;
@@ -134,26 +139,14 @@ body {
 	margin-left: 67px;
 }
 
-/* .heading-typeB p 共通 */
-.heading-typeB p{
+#page-body-main .page-body-main__heading--text p{
 	display: inline-block;
 	text-align: left;
 	padding: 0;
 }
 
-/* ↓↓↓↓↓↓↓なぜか反映されない↓↓↓↓↓↓↓↓↓ */
-/* .heading-typeB .heading-typeB-1 */
-.heading-typeB .heading-typeB-1 p {
-	margin: 0;
-}
-/* .heading-typeB .heading-typeB-2 */
-.heading-typeB .heading-typeB-2 p {
-	margin: 16px 0 0 0;
-}
-/* ↑↑↑↑↑なぜか反映されない↑↑↑↑↑ */
-
-/* スクショ_デジタルが拓く近未来(画像) */
-.story06_img_02 {
+/* メイン画像 */
+#page-body-main .page-body-main__heading--hero {
 	text-align: center;
 	padding: 15px 30px;
 	margin: 20px 0px 60px 0;
@@ -161,136 +154,200 @@ body {
 
 /* ビジネスモデルの特徴、人材が支えるNRI
 Previous Page、Next Page */
-
-.Previous-Next-Page ul li a:hover{
-	text-decoration: underline;
+#page-body-main .page-body-main__linear-navigation {
+	position: relative;
 }
-.Previous-Next-Page .text-align-left ul li {
-	list-style: none;
-	list-style-image: url("../02_images/icon-chevronLeft.svg");
-	list-style-position: inside;
-	text-align: left;
-}
-
-.Previous-Next-Page .text-align-right ul li {
-	list-style: none;
-	list-style-position: inside;
-/* 	list-style-image: url("../02_images/icon-chevronRight.svg"); */
-	text-align: right;
-}
-.Previous-Next-Page ul li a {
+#page-body-main .page-body-main__linear-navigation ul li a {
 	text-decoration: none;
 	color: #0C419A;
 	font-size: 16px;
 }
 
+#page-body-main .page-body-main__linear-navigation ul li a:hover{
+	text-decoration: underline;
+}
+
+#page-body-main .page-body-main__linear-navigation .page-body-main__linear-navigation--next ul li {
+	list-style: none;
+	text-align: right;
+	position: absolute;
+	top: 0px;
+	right:100px;
+}
+
+#page-body-main .page-body-main__linear-navigation .page-body-main__linear-navigation--previous ul {
+	padding-left: 100px;
+}
+
+#page-body-main .page-body-main__linear-navigation .page-body-main__linear-navigation--previous ul li {
+	list-style: none;
+}
+
+/* 擬似要素 afterを使い、”>”画像を表示する */
+#page-body-main .page-body-main__linear-navigation .page-body-main__linear-navigation--next ul li a:after{
+	content: "" ;
+	display: inline-block;
+	background-image: url("../02_images/icon-chevronRight.svg");
+	background-size: contain;
+	width: 12px;
+	height: 12px;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	margin-left: 6px;	
+}
+
+/* 擬似要素 beforeを使い、”<”画像を表示する */
+#page-body-main .page-body-main__linear-navigation .page-body-main__linear-navigation--previous ul li a:before{
+	content: "" ;
+	display: inline-block;
+	background-image: url("../02_images/icon-chevronLeft.svg");
+	background-size: contain;
+	width: 12px;
+	height: 12px;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	margin-left: 0;
+}
+
 /* 表 */
-.TextTable {
+#page-body-main .page-body-main__list .page-body-main__list__common {
 	border: 1px solid #DEECF8;
 	background-color: #DEECF8;
 	padding: 20px;
-	margin-top: 40px;
-	margin-bottom: 40px;
+	margin: 40px 100px 0 100px;
 }
 
-/* 要素を横並びに、リストスタイルを画像（>）に変更 */
-.TextTable p {
+#page-body-main .page-body-main__list .page-body-main__list__common .page-body-main__list__common__title__text {
+	display: inline-block;
+	text-align: center;
+/* 	width: 760px;
+	height: 160px; */
+}
+
+#page-body-main .page-body-main__list .page-body-main__list__common .page-body-main__list__common__title strong {
 	font-weight: bold;
 }
 
-.TextTable .TextTable-A ul li {
+#page-body-main .page-body-main__list .page-body-main__list__common .page-body-main__list__common__title__text ul li {
 	border: 1px solid #CCCCCC;
 	background-color: #FFFFFF;
-	padding:15px  20px;
-	margin-bottom: 40px;
 	list-style: none;
-	list-style-image: url("../02_images/icon-chevronRight.svg");
-	list-style-position: inside;
 }
 
 /* マウスオーバーした時に下線を表示 */
-.TextTable ul li a {
+#page-body-main .page-body-main__list .page-body-main__list__common .page-body-main__list__common__title__text ul li a {
 	text-decoration: none;
 	color: #0C419A;
 	font-size: 16px;
 }
 
 /* マウスオーバーした時に背景色を変える */
-.TextTable .TextTable-A  ul li:hover{
+#page-body-main .page-body-main__list .page-body-main__list__common .page-body-main__list__common__title__text ul li:hover{
 	background-color: rgba(192,192,192,0.1);
 	background-size:cover;	
 }
 
-.TextTable-1,
-.TextTable-2,
-.TextTable-3,
-.TextTable-4,
-.TextTable-5,
-.TextTable-6 {
-	float: left;
-	padding: 10px;
-	width: calc(25.5%);
-	height: 55px;
+/* 擬似要素 beforeを使い、”>”画像を表示する */
+#page-body-main .page-body-main__list .page-body-main__list__common .page-body-main__list__common__title__text ul li a:before{
+	content: "" ;
+	display: inline-block;
+	background-image: url("../02_images/icon-chevronRight.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	width: 10px;
+	height: 10px;
+}
+.page-body-main__list__common__title__text .page-body-main__list__common__title__text-1 ul,
+.page-body-main__list__common__title__text .page-body-main__list__common__title__text-2 ul {
+	padding: 0;
+	margin-left: 0;
+	margin-right: 0;
 }
 
-.TextTable-A:after{
-	content: "";
-	clear: both;
-	display: block;	
+.page-body-main__list__common__title__text .page-body-main__list__common__title__text-1 ul li,
+.page-body-main__list__common__title__text .page-body-main__list__common__title__text-2 ul li {
+		display: inline-block;
+		position: relative;
+		text-align: center;
 }
 
-/* ソーシャルボタン-B */
+.page-body-main__list__common__title__text .page-body-main__list__common__title__text-1 ul li {
+/* 	display: inline-block; */
+	width: 242px;
+	height: 70px;
+
+}
+.page-body-main__list__common__title__text .page-body-main__list__common__title__text-2 ul li {
+	width: 242px;
+	height: 60px;
+}
+
+.page-body-main__list__common__title__text .page-body-main__list__common__title__text-1 ul li a {
+	padding: 15px 20px;
+	margin-bottom: 20px;
+	position: absolute;
+	top: 10%;
+	left: 0%;
+}
+
+.page-body-main__list__common__title__text .page-body-main__list__common__title__text-2 ul li a {
+	padding: 15px 20px;
+	margin-bottom: 20px;
+	position: absolute;
+	top: 3%;
+	left: 0%;
+}
+
+/* ソーシャルボタン真ん中 */
 /* 親要素を相対配置に設定 */
-.TextTableBlock {
+#page-body-main .page-body-main__list {
 	position: relative;
-	background-color: #33FFCC;
 }
 
-.socialButton-B {
-/* 	background-color: skyblue; */
+.social-button-middle {
 	font-size: 12px;
 	color: #666666;
 	display: flex;
 	width: calc(20%);
 	position: absolute;
 	bottom: -90px;
-	right: 60px;
+	right: 80px;
 }
 
-.socialButton-B .icon-facebook,
-.socialButton-B .icon-twitter,
-.socialButton-B .icon-linkedin {
+.social-button-middle .icon-facebook,
+.social-button-middle .icon-twitter,
+.social-button-middle .icon-linkedin {
 	padding:3px 3px 3px 15px;
 	margin: 5px;
 }
 
-
-
 /* 企業情報リスト */
-.heading-typeC {
+.page-body-main__global-navigation {
 	text-align: left;
 	clear:both;
 }
 
-.heading-typeC h4 {
+.page-body-main__global-navigation h4 {
 	border-top: 2px solid #333333;
 	border-bottom: 1px dotted #999999;
 	padding: 18px 0 30px 0;
 	margin-top: 180px;
 }
 
-.heading-typeC ul {
+.page-body-main__global-navigation ul {
 	text-align: left;
 	border-bottom: 1px dotted #999999;
 }
 
 /* floatして親要素の高さがなくなったので、clearfixで、高さを確保 */
-.heading-typeC ul:after{
+.page-body-main__global-navigation ul:after{
 	content: "";
 	clear: both;
 	display: block;
 }
-.heading-typeC ul li {
+
+.page-body-main__global-navigation ul li {
 	width: 220px;
 	float: left;
 	color: #0C419A;
@@ -301,36 +358,35 @@ Previous Page、Next Page */
 	padding: 10px;
 }
 
-.heading-typeC ul li a{ 
+.page-body-main__global-navigation ul li a{ 
 	color: #0C419A;
 	text-decoration: none;
 	padding: 0;
 	line-height: 1.429;
 }
+
 /* リンクバック */
 /* マウスオーバーした時に下線を表示 */
-.link-back ul li a {
+.page-body-main__local-navigation__link-back ul li a {
 	text-decoration: none;
 	font-size: 16px;
 	color: #0C419A;
 	padding-left: 10px;
 }
-.link-back ul li a:hover{
+.page-body-main__local-navigation__link-back ul li a:hover{
 	text-decoration: underline;
 }
-.link-back ul li {
+.page-body-main__local-navigation__link-back ul li {
 	list-style: none;
 	list-style-image: url("../02_images/icon-chevronLeft.svg");
 }
 
 /* ソーシャルボタン-C (Follow Us)*/
-.socialButton-C_linkback {
-/* 	background-color: #33FFCC; */
+.page-body-main__local-navigation {
 	margin: 80px 0 30px 0;
 }
 
-.socialButton-C {
-/* 	background-color: skyblue; */
+.social-button-bottom {
 	border-top: 2px solid #999999;
 	border-bottom: 2px solid #999999;
 	padding: 10px 0;
@@ -340,38 +396,39 @@ Previous Page、Next Page */
 	background-size: cover;
 }
 
-.socialButton-C p {
+.social-button-bottom p {
 	color: #005BAC;
 	font-size: 20px;
 	font-weight: bold;
-/* 	border: 1px solid red; */
 	display: inline-block;
 	margin-right: 10px;
 }
 
-.socialButton-C .icon-facebook, 
-.socialButton-C .icon-twitter,
-.socialButton-C .icon-linkedin {
+.social-button-bottom .icon-facebook, 
+.social-button-bottom .icon-twitter,
+.social-button-bottom .icon-linkedin {
 		display: inline-block;
-/* 		border: 1px solid red; */
 		padding: 7px;
 		margin: 10px;
-/* 		vertical-align: center; */
 }
 
 /* ナレッジ・インサイト〜サイトマップ全体 */
-.heading-typeD,
-.heading-typeE,
-.heading-typeF,
-.heading-typeG,
-.heading-typeH,
-.heading-typeI,
-.heading-typeJ,
-.heading-typeK,
-.heading-typeL,
-.heading-typeM,
-.heading-typeN,
-.heading-typeO {
+.page-body-sub {
+	margin: 0 140px 60px 140px;
+}
+
+.page-body-sub__springboard-a,
+.page-body-sub__springboard-b,
+.page-body-sub__springboard-c,
+.page-body-sub__springboard-d,
+.page-body-sub__springboard-e,
+.page-body-sub__springboard-f,
+.page-body-sub__springboard-g,
+.page-body-sub__springboard-h,
+.page-body-sub__springboard-i,
+.page-body-sub__springboard-j,
+.page-body-sub__springboard-k,
+.page-body-sub__springboard-l {
 	width: calc(25%);
 	height: auto;
 	padding: 0px 10px;
@@ -379,40 +436,41 @@ Previous Page、Next Page */
 }
 
 /* line-heightの調整 */
-.heading-typeD-2 ul li a,
-.heading-typeE-2 ul li a,
-.heading-typeF-2 ul li a,
-.heading-typeG-2 ul li a,
-.heading-typeH-2 ul li a,
-.heading-typeI-2 ul li a {
+.page-body-sub__springboard-a-2 ul li a,
+.page-body-sub__springboard-b-2 ul li a,
+.page-body-sub__springboard-c-2 ul li a,
+.page-body-sub__springboard-d-2 ul li a,
+.page-body-sub__springboard-e-2 ul li a,
+.page-body-sub__springboard-f-2 ul li a {
  	line-height: 2.5
 }
 
 
 /* Flexboxを使い、レイアウトを横並びにする */
-.heading-typeD-O {
+.page-body-sub__springboard {
 	display: flex;
 	flex-wrap: wrap;
+	margin: 0 140px;
 }
 
 /* マウスオーバーした時に下線を表示 */
-.heading-typeD-O ul li:hover{
+.page-body-sub__springboard ul li:hover{
 	text-decoration: underline;
 }
 
 /* 罫線を上下に設定 */
-.heading-typeD-1,
-.heading-typeE-1,
-.heading-typeF-1,
-.heading-typeG-1,
-.heading-typeH-1,
-.heading-typeI-1,
-.heading-typeJ-1,
-.heading-typeK-1,
-.heading-typeL-1,
-.heading-typeM-1,
-.heading-typeN-1,
-.heading-typeO-1 {
+.page-body-sub__springboard-a-1,
+.page-body-sub__springboard-b-1,
+.page-body-sub__springboard-c-1,
+.page-body-sub__springboard-d-1,
+.page-body-sub__springboard-e-1,
+.page-body-sub__springboard-f-1,
+.page-body-sub__springboard-g-1,
+.page-body-sub__springboard-h-1,
+.page-body-sub__springboard-i-1,
+.page-body-sub__springboard-j-1,
+.page-body-sub__springboard-k-1,
+.page-body-sub__springboard-l-1 {
 	color: #666666;
 	font-weight: bold;
 	font-size: 16px;
@@ -420,74 +478,89 @@ Previous Page、Next Page */
 	border-bottom:1px solid #CCCCCC;
 }
 
-.heading-typeD-1 ul li a,
-.heading-typeE-1 ul li a,
-.heading-typeF-1 ul li a,
-.heading-typeG-1 ul li a,
-.heading-typeH-1 ul li a,
-.heading-typeI-1 ul li a,
-.heading-typeJ-1 ul li a,
-.heading-typeK-1 ul li a,
-.heading-typeL-1 ul li a,
-.heading-typeM-1 ul li a,
-.heading-typeN-1 ul li a,
-.heading-typeO-1 ul li a {
+.page-body-sub__springboard-a-1 ul li a,
+.page-body-sub__springboard-b-1 ul li a,
+.page-body-sub__springboard-c-1 ul li a,
+.page-body-sub__springboard-d-1 ul li a,
+.page-body-sub__springboard-e-1 ul li a,
+.page-body-sub__springboard-f-1 ul li a,
+.page-body-sub__springboard-g-1 ul li a,
+.page-body-sub__springboard-h-1 ul li a,
+.page-body-sub__springboard-i-1 ul li a,
+.page-body-sub__springboard-j-1 ul li a,
+.page-body-sub__springboard-k-1 ul li a,
+.page-body-sub__springboard-l-1 ul li a {
 	padding: 12px 0;
 	vertical-align: bottom;
 }
 
 /* リストスタイルを画像表示（>） */
-.heading-typeD-O ul li {
+.page-body-sub__springboard ul li {
 	list-style: none;
 	list-style-image: url("../02_images/icon-chevronRight.svg");
 }
 
-.heading-typeD-O ul li a{
+.page-body-sub__springboard ul li a{
 	color: #999999;
 	font-size: 14px;
 	text-decoration: none;
 }
 
 /* ページフッター */
-.pageFooter-typeA {
+#page-footer {
 	padding: 60px 0 66px 0;
+	margin: 0 140px;
 }
 
 /* フッターのリスト */
-.pageFooter-typeB ul li {
+/* 初期値で設定されているpadding-leftを解除 */
+#page-footer .page-footer__main ul {
+	padding-left: 0;
+	margin: 0 12px 15px 12px;
+}
+#page-footer .page-footer__main ul li {
 	font-size: 12px;
 	color: #999999;
 	list-style: none;
-	width: calc(14.2%);
+/* 	width: calc(14.0%); */
 	float: left;
-	border-right: 1px solid #999999;
 	box-sizing: border-box;
 	text-align: center;
 	line-height: 1.5;
+	padding: 0 5px;
 }
 
 /* floatして親要素の高さがなくなったので、clearfixで、高さを確保 */
-.pageFooter-typeB ul:after {
+#page-footer .page-footer__main ul:after {
 	content: "";
 	clear: both;
 	display: block;
 }
 
 /* リンク文字色を親要素に引き継ぎ、下線を消す */
-.pageFooter-typeB ul li a{
+#page-footer .page-footer__main ul li a{
 	color: inherit;
 	text-decoration: none;
 	display: block;
 	padding: 0;
 	margin: 0;
 }
+#page-footer .page-footer__main li a:before	{
+	content:"|";
+	display: inline-block;
+	box-sizing: border-box;
+	margin: 0px 15px 0px 0px;
+}
+#page-footer .page-footer__main li:first-child a:first-child:before {
+		content: none; 
+}
 
 /* マウスオーバーした時に下線を表示 */
-.pageFooter-typeB ul li a:hover{
+#page-footer .page-footer__main ul li a:hover{
 	text-decoration: underline;
 }
 
-.pageFooter-typeB ul li:first-child {
+#page-footer .page-footer__main ul li:first-child {
 	padding: 0 5px;
 }
 
