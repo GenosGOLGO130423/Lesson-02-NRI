@@ -9,20 +9,58 @@ body {
 	margin: 0;
 }
 
-/* ページヘッダー */
-#page-head img {
- 	display: inline-block;
- 	background-size: cover;
- 	width: 100%;
- 	height: 60px;
-	padding: 0 -10px 50px 0;
-	margin: 0 0 50px 14px;
- }
+/* ページヘッダー (NRI画像)*/
+#page-head .page-head__logo-nri {
+	padding: 10px 0px 0px 55px;
+}
+
+/* ページヘッダー (アイコン３つ画像)*/
+#page-head {
+	position:relative;
+}
+
+#page-head .page-head__logo-common ul {
+	display: flex;
+	position: absolute;
+	top:0px;
+	right:0px;
+	margin:0;
+	padding:0;
+}
+
+#page-head .page-head__logo-common ul li{
+	list-style: none;
+}
+
+#page-head .page-head__logo-common ul li .page-head__logo-common--search {
+	background-image:url("../02_images/icon-search-35.jpg");
+	background-repeat: no-repeat;
+	height:35px;
+	width: 35px;
+	margin:10px 20px 0px 0px;
+}
+
+#page-head .page-head__logo-common ul li .page-head__logo-common--base {
+	background-image:url("../02_images/icon-base-35.jpg");
+	background-repeat: no-repeat;
+	height:35px;
+	width: 35px;
+	margin:10px 10px 0px 15px;
+}
+
+#page-head .page-head__logo-common ul li .page-head__logo-common--menu {
+	background-image:url("../02_images/icon-menu-60.jpg");
+	background-repeat: no-repeat;
+	height:60px;
+	width: 60px;
+	margin: 0px 0px 0px 26px;
+}
+
  
 #page-head .page-head__breadcrumb {
 	color: #999999;
 	font-size: 12px;
-	margin: 0 0 30px 100px;
+	margin: 70px 0px 30px 100px;
 }
 
 #page-head .page-head__breadcrumb a {
@@ -76,17 +114,17 @@ figure {
 
 /* ソーシャルボタン上部*/
 /* 親要素を相対配置に設定 */
-#main-title .main-title__heading {
+#main-title {
 	position: relative;
 }
 
-.social-button-top {
+#main-title .social-button-top {
 	font-size: 12px;
 	color: #666666;
 	display: flex;
 	width: calc(20%);
 	position: absolute;
-	bottom: 220px;
+	top: 280px;
 	right: 150px;
 }
 
@@ -213,13 +251,14 @@ Previous Page、Next Page */
 #page-body-main .page-body-main__list .page-body-main__list__common {
 	border: 1px solid #DEECF8;
 	background-color: #DEECF8;
-	padding: 20px;
+	padding: 20px 20px 20px 30px;
 	margin: 40px 100px 0 100px;
 }
 
 #page-body-main .page-body-main__list .page-body-main__list__common .page-body-main__list__common__title__text {
 	display: inline-block;
-	text-align: center;
+	margin: 0 auto;
+/* 	text-align: center; */
 /* 	width: 760px;
 	height: 160px; */
 }
@@ -338,6 +377,7 @@ Previous Page、Next Page */
 .page-body-main__global-navigation ul {
 	text-align: left;
 	border-bottom: 1px dotted #999999;
+	padding-bottom: 30px;
 }
 
 /* floatして親要素の高さがなくなったので、clearfixで、高さを確保 */
