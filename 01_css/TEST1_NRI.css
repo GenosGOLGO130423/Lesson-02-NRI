@@ -277,11 +277,11 @@ Previous Page、Next Page */
 .page-body-main__list__common__title__unit-2 {
 	padding: 0px 10px;
 	width: calc(33.333%); /*--要素を３等分--*/
+	height: calc(50%); /*--要素を２等分--*/
 	box-sizing: border-box; ; /*--widthとheightに指定した値の中にpaddingとborderの値を含める--*/
 }
 
 .page-body-main__list__common__title__unit-1 a.item-1 {
-	height: 70px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -299,7 +299,6 @@ Previous Page、Next Page */
 }
 
 .page-body-main__list__common__title__unit-2 a.item-2 {
-	height: 51px;
 	display: flex;
 	justify-content: center;
     align-items: center;
