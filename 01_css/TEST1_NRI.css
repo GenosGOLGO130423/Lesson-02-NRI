@@ -140,13 +140,17 @@ figure {
 	margin: 0 140px 60px 140px;
 }
 
+#page-body-main .page-body-main__common {
+	margin: 100px 120px 0px 120px; 
+} 
+
 /* 本文のタイトル */
 #page-body-main .page-body-main__heading {
-	margin: 30px 150px;
+	margin: 30px 0px;
 }
 #page-body-main .page-body-main__heading h2 {
 	position:relative;
-	padding-top: 60px;
+	margin: 0 0 0 28px;
 	font-size: 22px;
 }
 
@@ -155,7 +159,7 @@ figure {
 	max-width: 100%;
 	position: absolute;
 	bottom: 5px;
-	left: -35px;
+	left: 0px;
 }
 
 /* 本文のタイトルを相対配置に（親要素） */
@@ -164,23 +168,14 @@ figure {
 	font-size: 18px;
 	line-height: 1.5;
 	color: #333333;
-	margin-bottom: 20px;
-	padding: 0;
-	margin:0 0 30px 100px ;
 }
 
 #page-body-main .page-body-main__heading--text {
 	line-height: 1.88;
-	text-align: left;
-	max-width: 100%;
-	height: auto;
-	margin-left: 67px;
 }
 
-#page-body-main .page-body-main__heading--text p{
-	display: inline-block;
-	text-align: left;
-	padding: 0;
+#page-body-main .page-body-main__heading--text p .page-body-main__heading--text-2 {
+	margin-top: 16px;
 }
 
 /* メイン画像 */
