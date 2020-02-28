@@ -260,28 +260,31 @@ Previous Page、Next Page */
 .page-body-main__list__common__title__detail-space-1 {
 	margin-top: 10px;
 }
+
 .page-body-main__list__common__title__detail-space-2 {
-	display: flex;	　/*--要素を横一列に並べる--*/
-	justify-content: center;	/*--横軸を中央揃え--*/
-	align-items: center; /*--縦軸を中央揃え--*/
-	flex-wrap:wrap; /*--折り返し--*/
+	display: flex; 	/*--子要素を横一列に並べる--*/
+	flex-wrap: wrap; /*--折り返し--*/
 	margin: 0px -10px;
 }
 
-.page-body-main__list__common__title__unit-1,
-.page-body-main__list__common__title__unit-2 {
+.page-body-main__list__common__title__unit-1{
+	display: flex;  /*--孫要素(p要素)を並列に並べる--*/
+	width: 33.333%; /*--要素を３等分--*/
 	padding: 0px 10px;
-	width: calc(33.333%); /*--要素を３等分--*/
-	height: calc(50%); /*--要素を２等分--*/
-	box-sizing: border-box; ; /*--widthとheightに指定した値の中にpaddingとborderの値を含める--*/
+	box-sizing: border-box;/*--widthとheightに指定した値の中にpaddingとborderの値を含める--*/
+}
+
+.page-body-main__list__common__title__unit-1 p {
+	display: flex; /*--孫孫要素(a要素)を並列に並べる--*/
+	align-items: center;
+	justify-content: center; 
+	padding: 0;
+    margin: 0;
 }
 
 .page-body-main__list__common__title__unit-1 a.item-1 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	text-align: center;
-	width: 100%;
+	width: 100%; 
 	font-size: 16px;
     line-height: 1.2;
     color: #0c419a;
@@ -293,26 +296,8 @@ Previous Page、Next Page */
     box-sizing: border-box;
 }
 
-.page-body-main__list__common__title__unit-2 a.item-2 {
-	display: flex;
-	justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    font-size: 16px;
-    line-height: 1.2;
-	color: #0c419a;
-	border: solid 1px #CCCCCC;
-	background-color: #FFFFFF;
-	padding: 15px 20px;
-	position: relative;
-	margin: 0px 0px 20px 0px;
-	box-sizing: border-box;
-}
-
 /* 擬似要素 beforeを使い、”>”画像を表示する */
-a.item-1:before,
-a.item-2:before {
+a.item-1:before {
 	content: "" ;
 	display: inline-block;
 	background-image: url("../02_images/icon-chevronRight.svg"); /*-->画像を背景に--*/
@@ -331,14 +316,12 @@ a.item-2:before {
 }
 
 /* マウスオーバーした時に下線を表示 */
-a.item-1,
-a.item-2 {
+a.item-1 {
 	text-decoration: none;
 }
 
 /* マウスオーバーした時に背景色を変える */
-a.item-1:hover,
-a.item-2:hover{
+a.item-1:hover {
 	background-color: #EEEEEE;
 	background-size:cover;	
 }
@@ -616,4 +599,3 @@ a.item-2:hover{
 	line-height: 1.88;
 	margin: 10px 10px 13px 0;
 }
-
