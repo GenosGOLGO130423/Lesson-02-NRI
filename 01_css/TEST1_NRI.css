@@ -276,14 +276,18 @@ Previous Page、Next Page */
 
 .page-body-main__list__common__title__unit-1 p {
 	display: flex; /*--孫孫要素(a要素)を並列に並べる--*/
-	align-items: center;
-	justify-content: center; 
+/* 	align-items: center; /*-- 指定すると、親のdivタグと大きさがずれてしまう,削除--*/
+/* 	justify-content: center; /*--削除--*/ */
 	padding: 0;
     margin: 0;
+    width: 100%; /*--親要素divタグと幅を合わせる --*/
 }
 
 .page-body-main__list__common__title__unit-1 a.item-1 {
 	text-align: center;
+	display: flex;/*--aタグの横・縦方向を中央揃えにする--*/
+	justify-content: center; /*--aタグの横方向を中央揃えにする--*/
+	align-items: center; /*--aタグの縦方向を中央揃えにする--*/
 	width: 100%; 
 	font-size: 16px;
     line-height: 1.2;
